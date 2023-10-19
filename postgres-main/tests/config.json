@@ -1,0 +1,83 @@
+{
+  "ci": {
+    "postgres_clear": {
+      "applicationName": "deno_postgres",
+      "database": "postgres",
+      "hostname": "postgres_clear",
+      "password": "postgres",
+      "port": 6000,
+      "socket": "/var/run/postgres_clear",
+      "users": {
+        "clear": "clear",
+        "socket": "socket"
+      }
+    },
+    "postgres_md5": {
+      "applicationName": "deno_postgres",
+      "database": "postgres",
+      "hostname": "postgres_md5",
+      "password": "postgres",
+      "port": 6001,
+      "socket": "/var/run/postgres_md5",
+      "users": {
+        "main": "postgres",
+        "md5": "md5",
+        "socket": "socket",
+        "tls_only": "tls_only"
+      }
+    },
+    "postgres_scram": {
+      "applicationName": "deno_postgres",
+      "database": "postgres",
+      "hostname": "postgres_scram",
+      "password": "postgres",
+      "port": 6002,
+      "socket": "/var/run/postgres_scram",
+      "users": {
+        "scram": "scram",
+        "socket": "socket"
+      }
+    }
+  },
+  "local": {
+    "postgres_clear": {
+      "applicationName": "deno_postgres",
+      "database": "postgres",
+      "hostname": "localhost",
+      "password": "postgres",
+      "port": 6000,
+      "socket": "/var/run/postgres_clear",
+      "users": {
+        "clear": "clear",
+        "socket": "socket"
+      }
+    },
+    "postgres_md5": {
+      "applicationName": "deno_postgres",
+      "database": "postgres",
+      "hostname": "localhost",
+      "password": "postgres",
+      "port": 6001,
+      "socket": "/var/run/postgres_md5",
+      "users": {
+        "clear": "clear",
+        "main": "postgres",
+        "md5": "md5",
+        "socket": "socket",
+        "tls_only": "tls_only"
+      }
+    },
+    "postgres_scram": {
+      "applicationName": "deno_postgres",
+      "database": "postgres",
+      "hostname": "localhost",
+      "password": "postgres",
+      "port": 6002,
+      "socket": "/var/run/postgres_scram",
+      "users": {
+        "scram": "scram",
+        "socket": "socket"
+      }
+    }
+  }
+}
