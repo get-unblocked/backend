@@ -1,3 +1,6 @@
+/*
+* Auth0 implementation
+*/
 import { Application } from "https://deno.land/x/oak/mod.ts";
 
 const client_id = "your-auth0-client-id";
