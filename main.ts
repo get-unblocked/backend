@@ -1,15 +1,25 @@
-import {serve} from "https://deno.land/std/http/server.ts";
+import { watch } from "https://deno.land/x/watch/mod.ts";
 
-export function add(a: number, b: number): number {
-  return a + b;
+async function monitorFiles() {
+  const watcher = watch("./path/to/your/files");
+
+  for await (const event of watcher) {
+    if (event.kind === "modify") {
+      switch (event.paths[0]) {
+        case "./path/to/your/files/store.ts":
+          console.log("`store.ts` has been modified");
+          break;
+        case "./path/to/your/files/notif.ts":
+          console.log("`notif.ts` has been modified");
+          break;
+        case "./path/to/your/files/auth.ts":
+          console.log("`auth.ts` has been modified");
+          break;
+      }
+    }
+  }
 }
 
-// Learn more at https://deno.land/manual/examples/module_metadata#concepts
 if (import.meta.main) {
-  serve((req) => {
-    return new Response(`Add 2 + 3 = ${add(2, 3)}`);
-  });
-  //console.log("Add 2 + 3 =", add(2, 3));
+  monitorFiles();
 }
-
-
