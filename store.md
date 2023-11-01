@@ -60,3 +60,6 @@ Future improvements may include supporting additional data types, enhancing meta
 
 ## Appendices
 Any additional diagrams, code snippets, or configuration details related to the storage service would be included here.
+
+# Implementation Notes
+- We are using Deno for the storage api and PostgreSQL as the database.
